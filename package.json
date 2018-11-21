@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-old": "babel src -d dist",
-    "start-old": "flow & babel -w src -d dist & nodemon dist/main.js --delay 800ms",
     "build": "flow && babel src/ -d dist/",
-    "startxx": "concurrently \"nodemon -w src/ -x 'npm run build'\" \"nodemon dist/main.js\"",
     "start": "nodemon -w src/ -x \"npm run build && node dist/main.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
