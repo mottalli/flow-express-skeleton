@@ -1,6 +1,9 @@
 import app from "../src/app";
+import request from "supertest";
+// Required for async testing
+import regeneratorRuntime from "regenerator-runtime";
 
-test("2+2=4", () => {
-  let a: number = 4;
-  expect(2 + 2).toBe(a);
+test("index works", async () => {
+  let result = await request(app).get("/");
+  expect(result.body.message).toBe("Hello world");
 });
