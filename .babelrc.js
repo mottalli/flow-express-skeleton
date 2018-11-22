@@ -4,11 +4,9 @@ module.exports = {
     "@babel/transform-flow-comments",
     "@babel/plugin-proposal-class-properties",
     [
-      "@babel/plugin-transform-regenerator",
+      "@babel/plugin-transform-runtime",
       {
-        helpers: true,
-        polyfill: true,
-        regenerator: false,
+        regenerator: true,
       },
     ],
   ],
